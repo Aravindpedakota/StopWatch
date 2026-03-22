@@ -1,49 +1,100 @@
-.main-container{
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to right, #ffffff ,blue);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-size: cover;
-    font-family: "Roboto";
+.main-container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #ffffff, blue);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;   
+  background-size: cover;
+  font-family: "Roboto";
+  padding: 20px;
 }
-.sub-container{
-    box-shadow: 0px 0px 4px 16px pink;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
+
+.sub-container {
+  box-shadow: 0px 0px 10px 5px pink;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
 }
-.head{
-    font-size: 50px;
-    margin: 50px;
-    justify-self: flex-start;
+
+
+.head {
+  font-size: 50px;
+  margin: 30px;
 }
-.button-container{
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
+
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px; 
+  flex-wrap: wrap;
+  justify-content: center;
 }
-button{
-    border-radius: 5px;
-    width: 6vw;
-    height: 4vh;
-    border: 0;
-    color: white;
-    padding: 5px;
-    margin: 5px;
-    box-shadow: 1px 1px 2px 2px #dfd006;
+
+
+button {
+  border-radius: 5px;
+  width: 100px;      
+  height: 40px;
+  border: 0;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 1px 1px 2px 2px #dfd006;
+  cursor: pointer;
 }
-.start{
-    background-color: green;
+
+
+.start {
+  background-color: green;
 }
-.stop{
-    background-color: red;
+.stop {
+  background-color: red;
 }
-.reset{
-    background-color: blue;
+.reset {
+  background-color: blue;
+}
+
+/* -------- Tablet -------- */
+@media (max-width: 1023px) {
+  .head {
+    font-size: 40px;
+  }
+
+  .sub-container {
+    padding: 30px;
+  }
+
+  button {
+    width: 90px;
+    height: 38px;
+  }
+}
+
+/* -------- Mobile -------- */
+@media (max-width: 767px) {
+  .head {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  .sub-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .button-container {
+    flex-direction: column;  
+  }
+
+  button {
+    width: 100%;              
+    height: 45px;
+  }
 }
